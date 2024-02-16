@@ -46,11 +46,9 @@ $("#table-1")
                 targets: [2, 3],
             },
         ],
-        buttons: ["copy", "excel", "pdf", "colvis"],
+
     })
-    .buttons()
-    .container()
-    .appendTo("#example1_wrapper .col-md-6:eq(0)");
+
 $("#table-2").dataTable({
     columnDefs: [{ sortable: false, targets: [0, 2, 3] }],
 });

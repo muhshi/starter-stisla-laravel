@@ -17,7 +17,16 @@
                         <div class="card">
                             <div class="card-header">
                                 <h4>Daftar User</h4>
+                                <div class="card-header-action">
+                                    <a href="{{ route('blog.new') }}" class="btn btn-primary btn-icon icon-right">Add<i class="fas fa-plus"></i></a>
+                                </div>
                             </div>
+                            @if (session('status'))
+                            <div class="alert alert-success">
+                                {{ session('status') }}
+                            </div>
+
+                            @endif
                             <div class="card-body">
                                 <table id="tabel1" class="table table-bordered table-striped">
                                     <thead>
@@ -25,8 +34,8 @@
                                             <th class="text-center">
                                                 #
                                             </th>
-                                            <th>Nama</th>
-                                            <th>Email</th>
+                                            <th>Judul</th>
+                                            <th>Isi</th>
                                             <th>Status</th>
                                             <th>Action</th>
                                         </tr>
@@ -37,9 +46,9 @@
                                                 <td class="align-middle">
                                                     {{ $loop->iteration }}
                                                 </td>
-                                                <td>{{ $item->name }}</td>
+                                                <td>{{ $item->judul }}</td>
                                                 <td>
-                                                    {{ $item->email }}
+                                                    {{ $item->isi }}
                                                 </td>
                                                 <td>
                                                     <div class="badge badge-success">Completed</div>
