@@ -25,6 +25,8 @@
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{ asset('stisla/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('stisla/css/components.css') }}">
+
+
 </head>
 
 <body>
@@ -116,6 +118,8 @@
 
     <!-- Page Specific JS File -->
     <script src="{{ asset('stisla/datatables/modules-datatables.js') }}"></script>
+
+
 </body>
 
 </html>
